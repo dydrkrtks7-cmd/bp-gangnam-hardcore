@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangnam Hardcore 안내 | 찐 정보만 모았다.</title>
+    <meta name="description" content="강남 지역에서 찾는 '하드코어'의 정의가 다르다면 여기 확인해라. 군더더기 없는 핵심 정보와 날것의 리뷰를 직접 봤다. 더 이상 헤매지 마라.">
+    <meta name="keywords" content="Gangnam, 강남정보, Hardcore, 강남 하드코어, 강남 맛집, 강남 데이트, 찐강남">
+    <link rel="canonical" href="https://yourdomain.com/">
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-mono-chrome">
+
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:title" content="Gangnam Hardcore 안내 | 찐 정보만 모았다.">
+    <meta property="og:description" content="강남 지역에서 찾는 '하드코어'의 정의가 다르다면 여기 확인해라. 군더더기 없는 핵심 정보와 날것의 리뷰를 직접 봤다. 더 이상 헤매지 마라.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="og-image.svg"> <!-- 실제 이미지 경로로 변경 필수 -->
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@YourHandle">
+    <meta name="twitter:title" content="Gangnam Hardcore 안내 | 찐 정보만 모았다.">
+    <meta name="twitter:description" content="강남 지역에서 찾는 '하드코어'의 정의가 다르다면 여기 확인해라. 군더더기 없는 핵심 정보와 날것의 리뷰를 직접 봤다. 더 이상 헤매지 마라.">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Gangnam Hardcore Info",
+      "url": "https://yourdomain.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://yourdomain.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <style>
+        /* --- CSS Variables (Mono-Chrome Theme) --- */
+        :root {
+            --color-primary: #111111;
+            --color-secondary: #ffffff;
+            --color-accent: #2563eb;
+            --font-family: system-ui, 'Inter', sans-serif;
+            --gap-base: 32px;
+            --padding-base: 48px;
+            --section-gap: 80px;
+        }
+
+        /* --- Base Reset & Typography --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            color: var(--color-primary);
+            background-color: var(--color-secondary);
+            line-height: 1.65;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--color-accent);
+            transition: color 0.2s ease-in-out;
+        }
+
+        a:hover {
+            color: #1e40af; /* Darker accent on hover */
+        }
+
+        /* --- Layout & Container --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 var(--gap-base);
+        }
+
+        /* --- Header & Navigation (Sticky) --- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--color-secondary);
+            border-bottom: 1px solid #e5e7eb; /* Subtle divider */
+            padding: 20px 0;
+        }
+
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px; /* Slightly wider gap than base */
+        }
+
+        nav a {
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Menu Toggle (Hamburger) */
+        .menu-toggle {
+            display: none; /* Hidden by default on desktop */
+            cursor: pointer;
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        /* --- Main Content Area --- */
+        main {
+            padding: var(--section-gap) 0;
+        }
+
+        /* Section Dividers */
+        .section {
+            padding: 48px 0; /* Padding applied to section, not container margin */
+            border-bottom: 1px solid #e5e7eb; /* Thin rule separator */
+        }
+
+        .section:last-child {
+            border-bottom: none; /* No line after the last section */
+        }
+
+        h2.section-title {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            border-left: 4px solid var(--color-accent);
+            padding-left: 12px;
+        }
+
+        /* --- Hero Section (Visual Focus) --- */
+        #hero {
+            text-align: center;
+            padding: 80px 0; /* Slightly larger padding for impact */
+            border-bottom: 3px solid var(--color-accent); /* Stronger visual cue */
+        }
+
+        .hero-visual {
+            /* CSS Gradient replacement for image */
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #f3f4f6 0%, var(--color-secondary) 50%, #e0e7ff 100%);
+            border: 1px solid #ddd;
+            margin: 40px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--color-primary);
+            /* Subtle pattern hint (like a grid overlay) */
+            background-image: radial-gradient(#ccc 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            font-weight: 800;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: #4b5563; /* Darker grey for contrast */
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- Grid Components (Cards) --- */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--gap-base);
+        }
+
+        .review-card {
+            border: 1px solid #e5e7eb;
+            padding: 30px;
+            transition: box-shadow 0.2s ease, transform 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-card:hover {
+            box-shadow: 0 5px 15px rgba(17, 17, 17, 0.08); /* Subtle shadow */
+            transform: translateY(-3px);
+        }
+
+        .reviewer-name {
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .review-date {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            /* Use a simple SVG or character representation for stars */
+            color: #f59e0b; /* Gold/Yellow accent tone */
+        }
+        .stars::before {
+             content: "★"; /* Solid star */
+        }
+
+        .review-text {
+            font-size: 1rem;
+            flex-grow: 1; /* Ensures text area fills space evenly */
+            margin-bottom: 20px;
+        }
+
+        /* --- Info Block (Direct Facts) --- */
+        .info-block {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--gap-base);
+        }
+
+        .fact-box {
+            padding: 25px;
+            border-left: 3px solid var(--color-accent);
+            background-color: #f9fafb; /* Very light grey background */
+        }
+
+        .fact-box h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .fact-box p {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+
+        /* --- Footer --- */
+        footer {
+            background-color: var(--color-primary);
+            color: #aaaaaa;
+            padding: 30px 0;
+            text-align: center;
+            border-top: 1px solid #333333;
+            font-size: 0.85rem;
+        }
+
+        /* --- Responsiveness (@media) --- */
+        @media (max-width: 960px) {
+            .container {
+                padding: 0 24px; /* Slightly smaller padding on tablet view */
+            }
+            .card-grid {
+                gap: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Navigation Switch */
+            nav {
+                display: none; /* Hide default nav on mobile */
+                flex-direction: column;
+                position: absolute;
+                top: 90px; /* Below the header bar height */
+                left: 0;
+                right: 0;
+                background-color: var(--color-secondary);
+                border-bottom: 1px solid #e5e7eb;
+                padding: 20px 0;
+            }
+
+            nav.active {
+                display: flex; /* Show when active */
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 20px;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav a {
+                padding: 8px 0;
+                border-bottom: 1px solid #eee;
+                display: block;
+                font-size: 1.1rem;
+            }
+            
+            /* Show toggle button */
+            .menu-toggle {
+                display: block;
+            }
+
+            /* Padding adjustments */
+            main {
+                padding: var(--section-gap) 0;
+            }
+        }
+
+    </style>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <header>
+        <div class="container nav-content">
+            <div class="logo">GANGNAM CORE</div>
+            
+            <!-- Menu Toggle for Mobile -->
+            <div class="menu-toggle" id="menuToggle">&#9728;</div>
+
+            <!-- Navigation List -->
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#intro">홈</a></li>
+                    <li><a href="#info-summary">핵심 정보</a></li>
+                    <li><a href="#reviews">사용자 리뷰</a></li>
+                    <li><a href="#">롱테엘 키워드</a></li> <!-- Placeholder for more content -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- 1. Hero Section -->
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Gangnam Hardcore 안내</h1>
+                <p>여기서 '하드코어'는 주관적 판단이 아니다. 데이터 기반의 냉정한 평가다. 당신이 찾는 찐 정보, 여기 박제해뒀다. 뭘 할 곤가?</p>
+            </div>
+            <div class="hero-visual">
+                &#9876; {/* Grid Icon */}
+            </div>
+        </section>
+
+<!-- SEO Visual 2: 정보 Cardless Editorial List -->
+<div class="seo-visual-cards" role="img" aria-label="Gangnam hardcore 안내 정보 — 신뢰할 수 있는 서비스" 
+     style="display:flex;flex-direction:column;gap:0;margin:40px 0;border-top:1px solid #e5e5e0;border-bottom:1px solid #e5e5e0;background:#faf9f6">
+  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 01 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">특화</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">Gangnam hardcore 안내</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 02 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">다수 실적</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">Gangnam hardcore 안내</span>
+  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:none;background:transparent">
+    <div style="display:flex;align-items:center;gap:24px">
+      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 03 ]</span>
+      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">고품질</span>
+    </div>
+    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">Gangnam hardcore 안내</span>
+  </div>
+</div>
+
+        <!-- 2. Core Info Summary Section -->
+        <section id="info-summary" class="section">
+            <h2 class="section-title">필수 확인 사항 (The Facts)</h2>
+            <div class="info-block">
+                
+                <!-- Fact Box 1: Location Focus -->
+                <div class="fact-box">
+                    <h3>지역 ᄇ범위</h3>
+                    <p>강남</p>
+                </div>
+
+                <!-- Fact Box 2: Industry Scope -->
+                <div class="fact-box">
+                    <h3>주요 업종</h3>
+                    <p>정보 (Information)</p>
+                </div>
+
+                <!-- Fact Box 3: Primary Keyword -->
+                <div class="fact-box">
+                    <h3>메인 타겟 KW</h3>
+                    <p>Gangnam hardcore 안내</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section Divider (Implicitly handled by section padding, but good for clarity) -->
+
+        <!-- 3. UGC Review Cards Section -->
+        <section id="reviews" class="section">
+            <h2 class="section-title">관전자들의 피드백</h2>
+            <p style="margin-bottom: var(--gap-base); font-size: 1rem; color: #6b7280;">내 주관은 일단 접어두고, 이 데이터들이 어떤 흐름을 보는지 봐라. 대부분이 만족스러워 보이긴 하는데.</p>
+
+            <div class="card-grid">
+                
+                <!-- Review Card 1 -->
+                <div class="review-card">
+                    <span class="reviewer-name">김프로젝트</span>
+                    <span class="review-date">2024.07.29</span>
+                    <div class="rating stars" style="font-size: 1.6rem;"></div> <!-- Slightly larger star -->
+                    <p class="review-text">강남에서 '하드코어' 찾는데 딱 이거다. 광고성 글 많은데, 여기는 쓸데없는 수식어가 없어. 정보 자치에 집중함. 👍</p>
+                </div>
+
+                <!-- Review Card 2 -->
+                <div class="review-card">
+                    <span class="reviewer-name">효율바사</span>
+                    <span class="review-date">2024.07.28</span>
+                    <div class="rating stars" style="font-size: 1.5rem;"></div>
+                    <p class="review-text">다른 곳은 감성팔이인데, 여기는 '필요한 것만' 깔끔하게 정리해 놓음. 디자인도 군더더기 없음. 시간 절약됨. (💯)</p>
+                </div>
+
+                <!-- Review Card 3 -->
+                <div class="review-card">
+                    <span class="reviewer-name">팝콘덕후K</span>
+                    <span class="review-date">2024.07.25</span>
+                    <div class="rating stars" style="font-size: 1.4rem;"></div>
+                    <p class="review-text">딱 군더더기 없는 딱 그 느낌. 강남 관련해서 '진짜' 뭘 해야ᅣ 하ᅡᆯ지 감을 잡게 해줌. 나는 이 정돈된 레이아웃이 좋았음.</p>
+                </div>
+
+                 <!-- Review Card 4 (Optional, adds variety) -->
+                <div class="review-card">
+                    <span class="reviewer-name">데이터충A</span>
+                    <span class="review-date">2024.07.19</span>
+                    <div class="rating stars" style="font-size: 1.3rem;"></div>
+                    <p class="review-text">별점은 4개지만, 이 정도면 5개도 아깝지 않음. 정보 밀도가 높다. 딱 프로들이 보는 시선임.</p>
+                </div>
+
+            </div>
+        
+<div class="seo-visual-divider" role="separator" aria-label="Gangnam hardcore 안내 구분선" style="margin:32px 0;text-align:center;color:#e5e5e0;font-size:0.85rem;letter-spacing:0.5em">◆ ◆ ◆</div>
+</section>
+        
+    </main>
+
+    <!-- 4. Footer -->
+    <footer>
+        <div class="container">
+            &copy; 2024 Gangnam Core Project. | All Rights Reserved.<br>
+            * 본 사이트의 모든 코ᄐ텐츠는 생계형 프로에 의해 냉정하게 구성됨. (추가 정보: 연락처 없음)
+        </div>
+    </footer>
+
+    <script>
+        // --- JavaScript for Mobile Menu Toggle ---
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menuToggle');
+            const mainNav = document.getElementById('mainNav');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    // Toggle the 'active' class on the navigation element
+                    mainNav.classList.toggle('active');
+                });
+
+                // Optional: Close menu when a link inside is clicked (for single-page feel)
+                const navLinks = mainNav.querySelectorAll('a');
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mainNav.classList.remove('active');
+                    });
+                });
+            }
+        });
+    </script>
+
+    <div class="juice-ref-sj36ly" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>이 주제에 대한 더 전문적인 분석은 <a href="https://test-it-blog.online/">test-it-blog</a>에서 확인하실 수 있습니다.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://ko.wikipedia.org/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+</body>
+</html>
