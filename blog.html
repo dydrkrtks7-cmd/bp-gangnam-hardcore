@@ -3,142 +3,405 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gangnam Hardcore 안내 | 찐 정보만 모았다.</title>
-    <meta name="description" content="강남 지역에서 찾는 '하드코어'의 정의가 다르다면 여기 확인해라. 군더더기 없는 핵심 정보와 날것의 리뷰를 직접 봤다. 더 이상 헤매지 마라.">
-    <meta name="keywords" content="Gangnam, 강남정보, Hardcore, 강남 하드코어, 강남 맛집, 강남 데이트, 찐강남">
-    <link rel="canonical" href="https://yourdomain.com/blog-post-gangnam-hardcore/"> <!-- 가상 URL 설정 -->
+    <title>블로그</title>
+    <meta name="description" content="공덕 풀싸롱 추천 가이드 블로그 — 표현 정리와 조건별 접근법이 입장을 결정합니다. 인원·시점·목적에 따른 실전 기준을 다룹니다.">
+    <meta name="keywords" content="공덕 풀싸롱, 공덕풀싸롱추천, 풀싸롱가이드, 공덕유흥, 풀싸롱표현, 공덕룸">
     <meta name="bpaas-design-system" content="editorial-apple">
-    <meta name="bpaas-design-theme" content="kr-mono-chrome">
-    <!-- Open Graph / Twitter Card -->
-    <meta property="og:title" content="Gangnam Hardcore 안내 | 찐 정보만 모았다.">
-    <meta property="og:description" content="강남 지역에서 찾는 '하드코어'의 정의가 다르다면 여기 확인해라. 군더더기 없는 핵심 정보와 날것의 리뷰를 직접 봤다. 더 이상 헤매지 마라.">
-    <!-- 추가적인 OG 태그는 필요에 따라 여기에 추가 가능 -->
+    <meta name="bpaas-design-theme" content="kr-ledger-warm">
+    <link rel="canonical" href="https://gongdeok-fullsalon-note.keepnote.shop/blog.html">
+    <meta property="og:title" content="공덕 풀싸롱 추천 가이드 — 표현을 정리하라, 입장이 결정된다">
+    <meta property="og:description" content="공덕 풀싸롱 이용 전 반드시 정리할 표현과 기준. 인원·시점·목적별 접근법을 통해 현명한 선택을 돕는 블로그입니다.">
+    <meta property="og:url" content="https://gongdeok-fullsalon-note.keepnote.shop/blog.html">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'IBM Plex Mono', 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+            background-color: #FAF8F5;
+            color: #1A1A1A;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #B8860B;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+        /* ===== FONT IMPORTS ===== */
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap');
+
+        /* ===== CUSTOM PROPERTIES ===== */
+        :root {
+            --color-bg: #FAF8F5;
+            --color-text: #1A1A1A;
+            --color-accent: #B8860B;
+            --color-border: #E0D5C1;
+            --color-muted: #6B6B6B;
+            --max-width: 800px;
+            --nav-height: 64px;
+        }
+
+        /* ===== NAVIGATION (nav-present) ===== */
+        .nav-present {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: var(--color-bg);
+            border-bottom: 1px solid var(--color-border);
+            height: var(--nav-height);
+            display: flex;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        .nav-present .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--color-text);
+        }
+        .nav-present .logo span {
+            color: var(--color-accent);
+        }
+        .nav-present .nav-links {
+            display: flex;
+            gap: 2rem;
+            margin-left: auto;
+            list-style: none;
+            padding-left: 0;
+        }
+        .nav-present .nav-links li a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        .nav-present .nav-links li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+        .nav-present .nav-links li a:hover::after {
+            width: 100%;
+        }
+        .nav-present .hamburger-menu {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+            margin-left: auto;
+        }
+        .nav-present .hamburger-menu span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--color-text);
+            transition: all 0.3s ease;
+        }
+        .nav-present .hamburger-menu.active span:nth-child(1) {
+            transform: rotate(45deg) translateY(7px);
+        }
+        .nav-present .hamburger-menu.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .nav-present .hamburger-menu.active span:nth-child(3) {
+            transform: rotate(-45deg) translateY(-7px);
+        }
+
+        /* ===== LAYOUT ===== */
+        .wrapper {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 2rem 2rem 4rem;
+        }
+        .blog-header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--color-border);
+            padding-bottom: 1.5rem;
+        }
+        .blog-header .category {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-header h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+        .blog-header .meta {
+            font-size: 0.9rem;
+            color: var(--color-muted);
+        }
+
+        .blog-content h2 {
+            font-size: 1.6rem;
+            margin: 2.5rem 0 1rem;
+            padding-top: 0.5rem;
+            border-top: 2px solid var(--color-accent);
+        }
+        .blog-content h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.75rem;
+        }
+        .blog-content p {
+            margin-bottom: 1.15rem;
+        }
+        .blog-content p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-content .divider {
+            width: 2rem;
+            height: 2px;
+            background-color: var(--color-accent);
+            margin: 2rem 0;
+        }
+
+        .blog-footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--color-muted);
+        }
+        .blog-footer a {
+            font-weight: 500;
+        }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            border-top: 1px solid var(--color-border);
+            padding: 2rem 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-muted);
+        }
+
+        /* ===== RESPONSIVE (responsive-768) ===== */
+        @media (max-width: 768px) {
+            .nav-present {
+                padding: 0 1.25rem;
+            }
+            .nav-present .nav-links {
+                position: fixed;
+                top: var(--nav-height);
+                left: 0;
+                width: 100%;
+                background-color: var(--color-bg);
+                border-bottom: 1px solid var(--color-border);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 2rem;
+                transform: translateY(-100%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                pointer-events: none;
+            }
+            .nav-present .nav-links.active {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+            }
+            .nav-present .nav-links li a {
+                display: block;
+                padding: 0.75rem 0;
+                border-bottom: 1px solid var(--color-border);
+            }
+            .nav-present .nav-links li:last-child a {
+                border-bottom: none;
+            }
+            .nav-present .hamburger-menu {
+                display: flex;
+            }
+
+            .wrapper {
+                padding: 1.5rem 1.25rem 3rem;
+            }
+            .blog-header h1 {
+                font-size: 1.8rem;
+            }
+            .blog-content h2 {
+                font-size: 1.3rem;
+            }
+            .blog-content h3 {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-header h1 {
+                font-size: 1.5rem;
+            }
+            .wrapper {
+                padding: 1rem 1rem 2rem;
+            }
+            .blog-footer {
+                flex-direction: column;
+                gap: 0.75rem;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <div class="nav-content container">
-            <a href="/" class="logo">GANGNAM HARDCORE</a>
-            <nav>
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/gangnam/info">망남 정보</a></li>
-                    <li><a href="/gangnam/review">찐 리뷰</a></li>
-                    <li><a href="/about">ABOUT (Bro)</a></li>
-                </ul>
-            </nav>
-            <!-- 패턴: hamburger-menu - 데스크톱에서는 이 부분이 숨겨지고 네비게이션이 펼쳐짐 -->
-            <button class="hamburger-menu" aria-label="메뉴 열기/닫기">☰</button> 
-        </div>
+    <!-- 네비게이션 -->
+    <header class="nav-present">
+        <div class="logo">공덕<span>풀싸롱</span>노트</div>
+        <button class="hamburger-menu" aria-label="메뉴 열기" onclick="this.classList.toggle('active'); document.querySelector('.nav-links').classList.toggle('active');">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/">홈</a></li>
+            <li><a href="/guide">가이드</a></li>
+            <li><a href="/blog">블로그</a></li>
+            <li><a href="/contact">문의</a></li>
+        </ul>
     </header>
 
-    <main class="container content-wrapper">
-        
-        <!-- === 콘텐츠 영역 시작 (Blog Post) === -->
-        
-        <article class="blog-post">
-            
-            <!-- 메인 헤더 블록: Bold Edgy Voice, Direct Address -->
-            <header class="post-header">
-                <h1 class="title">Gangnam Hardcore? 뻔한 소개팅 말고 '날것'을 원한다면 이걸 봐라.</h1>
-                <p class="subtitle">🔥 강남에서 진짜 하드코어의 의미를 찾고 있다면, 더 이상 시끄러운 광고판은 보지 마라. 여기 핵심만 박아 넣었다.</p>
+    <!-- 메인 콘텐츠 -->
+    <main class="wrapper">
+        <article>
+            <header class="blog-header">
+                <div class="category">가이드 &amp; 인사이트</div>
+                <h1>표현을 정리하라, 그래야 입장이 정해진다</h1>
+                <div class="meta">공덕 풀싸롱 노트 &mdash; 4분 읽음</div>
             </header>
 
-            <!-- 본문 내용 -->
-            <section class="post-body">
-                
-                <p class="lead-paragraph">솔직히 말하자. 강남에서 '하드코어'를 검색하면 뭐가 뜨는지 내가 다 봤다. 비싼 값에 똥 같은 서비스, 혹은 분위기만 번지르르하고 알맹이가 없는 곳들. 지겹잖아. 우리는 그딴 걸 거른다. 우리는 진짜, 군더더기 제로의 핵심을 원한다.</p>
+            <div class="blog-content">
+                <p>공덕 풀싸롱에 가기 전, 당신이 가장 먼저 해야 할 일은 표현을 정리하는 것이다. 많은 이들이 '그냥 가면 되지'라고 생각하지만, 그 생각이 가장 큰 함정이다. 기준 없이 입장한 자리는 대부분 실패로 끝난다. 이 글은 당신이 언어와 조건을 정리하지 않으면 어떤 일이 벌어지는지, 어떻게 준비해야 하는지를 말한다.</p>
+                <p>업계의 관행을 솔직히 말하겠다. 정리되지 않은 손님은 실력 있는 자리와 거리가 멀다. 반대로 몇 가지 기준만 명확히 해도 당신이 원하는 방향으로 진행될 가능성이 급격히 올라간다. 여기서 말하는 기준은 복잡한 것이 아니다. 인원, 시점, 목적, 이 세 가지만 정리해도 충분하다.</p>
 
-                <h2>📌 [Part 1] 강남 Hardcore = '본질에 충실함'</h2>
-                <p>내 기준에서 강남 하드코어는 '화려함'이 아니야. 화려한 건 누구나 할 수 있지. 진짜 하드코어는 **"이건 군더더기가 없다. 딱 필요한 것만 존재한다."** 이거지.</p>
-                <ul>
-                    <li><strong>❌ 흔한 오해:</strong> 비싼 와인, 힙한 BGM, 인스타 감성 포토존. (Good, but not enough.)</li>
-                    <li><strong>✅ 진짜 의미:</strong> 요리 하나에 목숨 거는 장인의 집념, 대화의 밀도를 높이는 미니멀한 공간 설계, 타협하지 않는 서비스 태도.</li>
-                </ul>
+                <div class="divider"></div>
 
-                <h2>🔪 [Part 2] 내가 직접 검증한 '찐' 하드코어 리스트</h2>
-                <div class="card-grid">
-                    <!-- Card 1: 맛집 -->
-                    <div class="card content-card">
-                        <h3>🥩 고기 (Meat)</h3>
-                        <p><strong>📍 도장 깨기 필수:</strong> [OOO 스테이크 하우스]. 소스 한 방울도 허투루 쓰지 않음. 옆 테이블 대화까지 들릴 정ᆼ도의 밀도 높은 맛. 이건 미식가들이 숨기는 치트키다.</p>
-                    </div>
-                    <!-- Card 2: 데이트/감성 -->
-                    <div class="card content-card">
-                        <h3>🌃 분위기 (Vibe)</h3>
-                        <p><strong>📍 조용하지만 강렬한 곳:</strong> [XX 루프탑 바]. 시끄러운 파티는 싫다면 여기. 도시의 소음 속에서도 나만의 '고요한 폭발'을 느끼고 싶을 때 딱이다.</p>
-                    </div>
-                     <!-- Card 3: 정보/활동 -->
-                    <div class="card content-card">
-                        <h3>🧠 경험 (Experience)</h3>
-                        <p><strong>📍 지식 충전소:</strong> [YYY 북카페/스터디룸]. 맛집 말고 뭔가 생산적인 '하드코어'를 원한다면? 이곳의 책장과 커피 한 잔이 주는 집중력은 대체 불가능하다.</p>
-                    </div>
-                </div>
+                <h2>인원이 곧 전략이다</h2>
+                <h3>혼자 방문할 때</h3>
+                <p>혼자 방문할 때 당신이 감수해야 할 조건은 무엇인가. 보통 1인은 선택지가 제한된다. 당신이 어떤 태도를 취하느냐에 따라 진행이 완전히 달라진다. 혼자 갈 때는 사전에 시스템을 정확히 확인해야 한다. 특히 최소 인원 기준이 있는지, 1인 이용 시 추가 비용이 발생하는지 묻는 것을 잊지 마라.</p>
+                <p>당신이 혼자임을 드러내는 방식도 중요하다. 너무 위축된 태도는 불리한 조건을 부를 수 있다. 자신의 기준을 분명히 말할 수 있어야 한다. "저는 이런 시스템을 원합니다"라고 명확히 표현하는 사람이 더 나은 선택지를 받는다.</p>
 
-                <h2>🎤 [Part 3] 브로의 최종 코멘트: 어떻게 움직일 것인가</h2>
-                <p class="strong-opinion">결론적으로, 강남에서 '뭘 할지' 고민하지 마라. 그냥 **"가장 적은 노력으로 최대의 임팩트를 줄 곳"**을 고르면 된다. 오늘 이 리스트를 참고해서, 남들의 트렌드를 따라가는 수준이 아니라, 스스로 기준을 세우고 움직여라.</p>
-                <p class="call-to-action">👉 다음 글에서는 'Gangnam 데이트 찐 실패담 TOP 5'를 들고 온다. 구독하고 더 이상 헤매지 마라. (PBN 스타일)</p>
+                <h3>둘이 방문할 때</h3>
+                <p>2인이면 선택지가 넓어진다. 하지만 동행자의 취향과 기대치가 다를 경우 중간지점을 찾는 게 쉽지 않다. 두 사람이 같은 기준을 공유해야 자리에서 갈등이 생기지 않는다. 함께 방문하기 전에 서로의 목적을 반드시 확인하라.</p>
+                <p>둘이 방문할 때는 인원 대비 공간의 적절성도 고려해야 한다. 너무 큰 자리나 너무 좁은 자리는 분위기를 해친다. 사전에 인원 구성과 선호하는 분위기를 업체에 전달하는 것이 좋다. 이것이 당신의 시간과 비용을 아끼는 길이다.</p>
 
-            </section>
+                <h3>단체 방문할 때</h3>
+                <p>단체로 갈 경우 예약과 공간 배정이 핵심이다. 인원이 많다고 무조건 좋은 조건이 적용되지 않는다. 오히려 방문 전에 인원별 조건을 명확히 하지 않으면 자리 배정에서 불이익을 받을 수 있다. 단체일수록 기준은 더 단순하고 강력해야 한다.</p>
+                <p>단체의 성격도 중요하다. 업무 접대인지, 친목 모임인지에 따라 요구사항이 완전히 다르다. 단체의 목적을 하나로 정의하고 그에 맞는 업장을 선택해야 한다. 그렇지 않으면 절반의 만족도 얻기 어렵다.</p>
 
-<!-- SEO Visual 2: 정보 Cardless Editorial List -->
-<div class="seo-visual-cards" role="img" aria-label="Gangnam hardcore 안내 정보 — 신뢰할 수 있는 서비스" 
-     style="display:flex;flex-direction:column;gap:0;margin:40px 0;border-top:1px solid #e5e5e0;border-bottom:1px solid #e5e5e0;background:#faf9f6">
-  <div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
-    <div style="display:flex;align-items:center;gap:24px">
-      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 01 ]</span>
-      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">특화</span>
-    </div>
-    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">Gangnam hardcore 안내</span>
-  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:1px solid #e5e5e0;background:transparent">
-    <div style="display:flex;align-items:center;gap:24px">
-      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 02 ]</span>
-      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">다수 실적</span>
-    </div>
-    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">Gangnam hardcore 안내</span>
-  </div><div style="display:flex;align-items:center;justify-content:space-between;padding:24px 16px;border-bottom:none;background:transparent">
-    <div style="display:flex;align-items:center;gap:24px">
-      <span style="font-family:monospace;font-size:1rem;color:#8a7355;letter-spacing:0.05em;font-weight:500">[ 03 ]</span>
-      <span style="font-family:serif;font-weight:400;font-size:1.2rem;color:#1c1c1e;letter-spacing:-0.02em">고품질</span>
-    </div>
-    <span style="font-family:sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;color:#8a7355;font-weight:600">Gangnam hardcore 안내</span>
-  </div>
-</div> <!-- /post-body -->
+                <div class="divider"></div>
 
+                <h2>시점은 기회비용이다</h2>
+                <h3>첫 방문이라면</h3>
+                <p>처음 가는 곳에서 당신은 무조건 물어봐야 할 것이 있다. 시스템은 투명한가, 추가 비용은 무엇이 있는가, 기본 서비스의 범위는 어디까지인가. 이 질문들을 하지 않으면 입장 후에야 알게 되는 불편함이 생긴다. 첫인상을 결정하는 것은 분위기가 아니라 정보다.</p>
+                <p>첫 방문은 당신이 평가하는 자리인 동시에 상대방이 당신을 평가하는 자리다. 당신이 기준을 명확히 제시할수록 업장도 진지하게 응대한다. 모호하게 넘어가는 질문은 모호한 답변을 부른다. 구체적으로 질문하라.</p>
+
+                <h3>단골이 되려 한다면</h3>
+                <p>이미 방문한 경험이 있다면 당신의 기준도 업데이트해야 한다. 조건이 바뀌었을 가능성을 염두에 두고, 이전과 동일한 조건을 기대하지 마라. 단골이라고 해서 항상 유리한 것은 아니다. 오히려 당신의 안일함이 불이익을 만든다.</p>
+                <p>단골 자리를 유지하려면 당신 역시 꾸준히 기준을 관리해야 한다. 새로운 메뉴, 변경된 시스템, 인력 변동 등을 확인하지 않으면 예전과 다른 경험을 할 수 있다. 단골의 이점을 극대화하려면 정보를 계속 갱신하라.</p>
+
+                <h3>예약 상황에서</h3>
+                <p>예약은 필수에 가깝지만, 예약 시간에 따라 진행 방식이 다를 수 있다. 성수기와 비수기의 차이, 평일과 주말의 차이를 고려하지 않고 예약하면 실제 방문했을 때 실망할 수 있다. 예약 전에 시점에 따른 조건 차이를 반드시 확인하라.</p>
+                <p>예약 시 당신의 요구사항을 솔직히 말하는 것이 좋다. "이런 자리를 원한다"고 구체적으로 이야기하면 업장에서도 준비가 가능하다. 예약은 단순히 시간을 확보하는 행위가 아니라, 당신의 기준을 전달하는 첫 단계다.</p>
+
+                <div class="divider"></div>
+
+                <h2>목적이 방법을 결정한다</h2>
+                <h3>접대 목적</h3>
+                <p>접대 목적이라면 상대방의 기대치를 먼저 파악해야 한다. 당신의 만족이 아니라 상대의 만족이 우선이다. 장소의 격식, 서비스의 종류, 추가 비용의 범위까지 상대방이 불편하지 않도록 모든 기준을 사전에 정리해야 한다.</p>
+                <p>접대 자리에서는 당신의 표현이 더욱 중요하다. 상대방이 불편함을 느끼지 않도록 자연스럽게 분위기를 이끌어야 한다. 사전에 업장 측에 접대 목적임을 알리면 더 세심한 서비스를 받을 수 있다. 숨기지 말고 솔직히 말하라.</p>
+
+                <h3>개인 만족 목적</h3>
+                <p>자기 만족을 위한 방문이라면 당신의 기준을 명확히 하는 것이 우선이다. 다른 사람의 추천이나 유행에 휩쓸리지 말고, 당신이 중요하게 생각하는 요소(분위기, 시스템, 가격 등)를 스스로 정리하라. 그렇지 않으면 불필요한 선택을 하게 된다.</p>
+                <p>개인 만족을 추구할 때는 당신의 예산과 기대치를 현실적으로 조정해야 한다. 너무 높은 기대는 실망을 부르고, 너무 낮은 기준은 만족도를 떨어뜨린다. 당신만의 명확한 기준선을 가지고 선택하라.</p>
+
+                <h3>이벤트 목적</h3>
+                <p>기념일이나 특별한 날에 방문한다면 평소와 다른 기준이 적용될 수 있다. 특별한 날을 위해 추가 옵션을 요구할 수 있지만, 그에 따른 비용과 조건을 미리 확인하지 않으면 오히려 분위기를 망칠 수 있다. 목적이 특별할수록 사전 확인은 철저해야 한다.</p>
+                <p>이벤트 목적이라면 업장에 미리 알리는 것이 좋다. 생일, 기념일 등 특별한 날을 미리 전달하면 업장에서도 준비를 할 수 있다. 당신이 원하는 분위기를 구체적으로 요청하고, 가능한 범위를 사전에 확인하라.</p>
+
+                <div class="divider"></div>
+
+                <h2>반드시 확인해야 할 기준 리스트</h2>
+                <h3>위치 접근성</h3>
+                <p>역과의 거리, 주차 가능 여부, 대중교통 연결성. 이런 기본적인 물리적 조건은 무시하기 쉽지만 실제 방문했을 때 가장 큰 스트레스로 작용한다. 특히 첫 방문이면 도착 전에 주변 환경을 미리 확인하라.</p>
+                <p>접근성이 좋지 않은 곳은 당신의 만족도를 크게 낮춘다. 이동 시간과 비용을 고려하여 선택해야 한다. 친구나 동료와 함께 간다면 모두의 접근성을 고려하는 것이 매너다.</p>
+
+                <h3>시스템 투명성</h3>
+                <p>가장 중요한 기준은 시스템의 투명성이다. 주류 포함 여부, 시간 제한, 추가 비용 발생 조건, 인원 추가 시 비용 등이 명확하지 않은 곳은 피하는 것이 좋다. 입장 전에 이러한 항목을 반드시 질문하라.</p>
+                <p>투명하지 않은 업장은 대부분 입장 후에 예상치 못한 비용을 발생시킨다. 당신이 질문을 주저하면 상대방도 답변을 주저한다. 당당하게 물어보라. 명확한 답변을 주는 곳이 좋은 곳이다.</p>
+
+                <h3>서비스 한계</h3>
+                <p>기본 서비스의 범위와 옵션 서비스의 한계를 정확히 알아야 한다. 모호하게 넘어가는 표현은 금물이다. 서비스의 시작과 끝을 명확히 이해하지 않으면 자리에서 오해가 생기고 불쾌감을 느낄 수 있다.</p>
+                <p>업장마다 서비스의 기준이 다르다. 당신이 당연하게 생각하는 것이 그곳에서는 추가 옵션인 경우가 많다. "기본 서비스에 무엇이 포함되는지"를 가장 먼저 확인하라. 이것이 모든 오해를 막는 출발점이다.</p>
+
+                <div class="divider"></div>
+
+                <p>위에서 언급한 기준들을 정리하지 않으면 당신은 불확실한 자리에서 시간과 돈을 낭비하게 된다. 공덕 풀싸롱은 준비된 손님에게 더 나은 선택지를 제공한다. 이것은 업계의 관행이 아니라 현실이다. 당신이 자신의 기준을 명확히 할수록 당신의 시간과 비용은 더 효율적으로 사용된다.</p>
+                <p>결국 표현 정리가 입장을 결정한다는 말은 과장이 아니다. 당신이 어떻게 준비하느냐에 따라 경험의 질이 완전히 달라진다. 이 글이 당신의 선택에 실질적인 도움이 되길 바란다. 기준을 정리하지 않았다면, 지금 당장 정리하라. 그것이 첫걸음이다.</p>
+            </div>
+
+            <footer class="blog-footer">
+                <span>공덕 풀싸롱 노트 &mdash; 모든 기준은 당신의 선택을 위해</span>
+                <a href="/guide">가이드 더보기 →</a>
+            </footer>
         </article>
-        <!-- === 콘텐츠 영역 끝 === -->
-
-
-        <!-- FAQ 섹션: 짧고 단도직입적으로 질문/답변 -->
-        <section class="faq-section">
-            <h3>❓ 자주 묻는 '하드코어' 질문</h3>
-            <div class="faq-item">
-                <h4>Q. 강남에서 가장 하드코어한 맛집은 어디인가요?</h4>
-                <p>A. 고민할 시간에 OOO 스테이크를 예약해라. 다른 곳은 그냥 '맛있다'고 말하는 수준에 머무른다.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Q. 데이트 코스는 어떻게 짜야 하나요?</h4>
-                <p>A. 뻔한 강남역 삼거리 말고, 청담이나 신논현 쪽의 '골목 깊숙이' 들어가 봐라. 그게 진짜 시작이다.</p>
-            </div>
-            <div class="faq-item">
-                <h4>Q. 이 글을 읽는 게 왜 하드코어인가요?</h4>
-                <p>A. 네가 시중에 떠도는 수많은 '착한 거짓말' 정보들을 솎아내고, 가장 날카롭고 비판적인 관점을 주입했기 때문이다.</p>
-            </div>
-        
-<div class="seo-visual-divider" role="separator" aria-label="Gangnam hardcore 안내 구분선" style="margin:32px 0;text-align:center;color:#e5e5e0;font-size:0.85rem;letter-spacing:0.5em">◆ ◆ ◆</div>
-</section>
-
     </main>
 
-    <!-- Footer (간략하게) -->
+    <!-- 사이트 푸터 -->
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2024 Gangnam Hardcore Guide. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="/privacy">PRIVACY</a> | <a href="/terms">TERMS</a>
-            </div>
-        </div>
+        <p>© 공덕 풀싸롱 노트 · 표현과 기준을 정리하는 공간</p>
     </footer>
 
+    <!-- 모바일 메뉴 스크립트 -->
+    <script>
+        document.querySelector('.hamburger-menu').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector('.hamburger-menu').classList.remove('active');
+                document.querySelector('.nav-links').classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
