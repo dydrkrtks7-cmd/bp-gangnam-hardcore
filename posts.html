@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · gangnam-hardcore</title>
+  <meta name="description" content="gangnam-hardcore에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://gangnam-local-info.pbn-builder.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* --- CSS Variables (Mono-Chrome Theme) --- */
+ :root {
+ --color-primary: #111111;
+ --color-secondary: #ffffff;
+ --color-accent: #2563eb;
+ --font-family: system-ui, 'Inter', sans-serif;
+ --gap-base: 32px;
+ --padding-base: 48px;
+ --section-gap: 80px;
+ }
+
+ /* --- Base Reset & Typography --- */
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+
+ body {
+ font-family: var(--font-family);
+ color: var(--color-primary);
+ background-color: var(--color-secondary);
+ line-height: 1.65;
+ }
+
+ a {
+ text-decoration: none;
+ color: var(--color-accent);
+ transition: color 0.2s ease-in-out;
+ }
+
+ a:hover {
+ color: #1e40af; /* Darker accent on hover */
+ }
+
+ /* --- Layout & Container --- */
+ .container {
+ max-width: 960px;
+ margin: 0 auto;
+ padding: 0 var(--gap-base);
+ }
+
+ /* --- Header & Navigation (Sticky) --- */
+ header {
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ background-color: var(--color-secondary);
+ border-bottom: 1px solid #e5e7eb; /* Subtle divider */
+ padding: 20px 0;
+ }
+
+ .nav-content {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+ .logo {
+ font-size: 1.5rem;
+ font-weight: 700;
+ color: var(--color-primary);
+ }
+
+ nav ul {
+ display: flex;
+ list-style: none;
+ gap: 40px; /* Slightly wider gap than base */
+ }
+
+ nav a {
+ font-weight: 500;
+ text-transform: uppercase;
+ font-size: 0.9rem;
+ }
+
+ /* Mobile Menu Toggle (Hamburger) */
+ .menu-toggle {
+ display: none; /* Hidden by default on desktop */
+ cursor: pointer;
+ font-size: 1.8rem;
+ line-height: 1;
+ }
+
+ /* --- Main Content Area --- */
+ main {
+ padding: var(--section-gap) 0;
+ }
+
+ /* Section Dividers */
+ .section {
+ padding: 48px 0; /* Padding applied to section, not container margin */
+ border-bottom: 1px solid #e5e7eb; /* Thin rule separator */
+ }
+
+ .section:last-child {
+ border-bottom: none; /* No line after the last section */
+ }
+
+ h2.section-title {
+ font-size: 2rem;
+ margin-bottom: 30px;
+ text-transform: uppercase;
+ letter-spacing: -0.05em;
+ border-left: 4px solid var(--color-accent);
+ padding-left: 12px;
+ }
+
+ /* --- Hero Section (Visual Focus) --- */
+ #hero {
+ text-align: center;
+ padding: 80px 0; /* Slightly larger padding for impact */
+ border-bottom: 3px solid var(--color-accent); /* Stronger visual cue */
+ }
+
+ .hero-visual {
+ /* CSS Gradient replacement for image */
+ width: 100%;
+ height: 250px;
+ background: linear-gradient(135deg, #f3f4f6 0%, var(--color-secondary) 50%, #e0e7ff 100%);
+ border: 1px solid #ddd;
+ margin: 40px auto;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 3rem;
+ color: var(--color-primary);
+ /* Subtle pattern hint (like a grid overlay) */
+ background-image: radial-gradient(#ccc 1px, transparent 1px);
+ background-size: 40px 40px;
+ }
+
+ .hero-content h1 {
+ font-size: 3.5rem;
+ margin-bottom: 15px;
+ line-height: 1.1;
+ font-weight: 800;
+ }
+
+ .hero-content p {
+ font-size: 1.25rem;
+ color: #4b5563; /* Darker grey for contrast */
+ max-width: 700px;
+ margin: 0 auto;
+ }
+
+ /* --- Grid Components (Cards) --- */
+ .card-grid {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+ gap: var(--gap-base);
+ }
+
+ .review-card {
+ border: 1px solid #e5e7eb;
+ padding: 30px;
+ transition: box-shadow 0.2s ease, transform 0.2s ease;
+ display: flex;
+ flex-direction: column;
+ }
+
+ .review-card:hover {
+ box-shadow: 0 5px 15px rgba(17, 17, 17, 0.08); /* Subtle shadow */
+ transform: translateY(-3px);
+ }
+
+ .reviewer-name {
+ font-weight: 700;
+ margin-bottom: 8px;
+ display: block;
+ }
+
+ .review-date {
+ font-size: 0.85rem;
+ color: #6b7280;
+ margin-bottom: 15px;
+ }
+
+ .rating {
+ font-size: 1.4rem;
+ margin-bottom: 15px;
+ /* Use a simple SVG or character representation for stars */
+ color: #f59e0b; /* Gold/Yellow accent tone */
+ }
+ .stars::before {
+ content: "★"; /* Solid star */
+ }
+
+ .review-text {
+ font-size: 1rem;
+ flex-grow: 1; /* Ensures text area fills space evenly */
+ margin-bottom: 20px;
+ }
+
+ /* --- Info Block (Direct Facts) --- */
+ .info-block {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: var(--gap-base);
+ }
+
+ .fact-box {
+ padding: 25px;
+ border-left: 3px solid var(--color-accent);
+ background-color: #f9fafb; /* Very light grey background */
+ }
+
+ .fact-box h3 {
+ font-size: 1.1rem;
+ margin-bottom: 8px;
+ text-transform: uppercase;
+ letter-spacing: 0.02em;
+ }
+
+ .fact-box p {
+ font-size: 1.4rem;
+ font-weight: 600;
+ margin: 0;
+ }
+
+
+ /* --- Footer --- */
+ footer {
+ background-color: var(--color-primary);
+ color: #aaaaaa;
+ padding: 30px 0;
+ text-align: center;
+ border-top: 1px solid #333333;
+ font-size: 0.85rem;
+ }
+
+ /* --- Responsiveness (@media) --- */
+ @media (max-width: 960px) {
+ .container {
+ padding: 0 24px; /* Slightly smaller padding on tablet view */
+ }
+ .card-grid {
+ gap: 24px;
+ }
+ }
+
+ @media (max-width: 768px) {
+ /* Navigation Switch */
+ nav {
+ display: none; /* Hide default nav on mobile */
+ flex-direction: column;
+ position: absolute;
+ top: 90px; /* Below the header bar height */
+ left: 0;
+ right: 0;
+ background-color: var(--color-secondary);
+ border-bottom: 1px solid #e5e7eb;
+ padding: 20px 0;
+ }
+
+ nav.active {
+ display: flex; /* Show when active */
+ }
+
+ nav ul {
+ flex-direction: column;
+ gap: 20px;
+ width: 100%;
+ text-align: center;
+ }
+
+ nav a {
+ padding: 8px 0;
+ border-bottom: 1px solid #eee;
+ display: block;
+ font-size: 1.1rem;
+ }
+ 
+ /* Show toggle button */
+ .menu-toggle {
+ display: block;
+ }
+
+ /* Padding adjustments */
+ main {
+ padding: var(--section-gap) 0;
+ }
+ }
+
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · gangnam-hardcore">
+  <meta property="og:description" content="gangnam-hardcore에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://gangnam-local-info.pbn-builder.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 36개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/compare-002-r5fcqr.html">Gangnam hardcore 안내 vs Gangnam hardcore 안내 비교</a>
+        <p class="post-item__summary">아, 진짜.. 슬라이드 번호 7장의 내용이 언론에서 다루지 않은 부분에 대한 팩트체크를 할 때, 보잉 MCAS 내부고발과 MK울트라는 CIA 비밀 프로젝트가 동시에 등장하는 경우를 상상해봅시다. 이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0272.html">Gangnam hardcore 안내 및 마포/합정 인디 소셜 라운지 가이드 소개</a>
+        <p class="post-item__summary">최근 Gangnam hardcore 안내 정보에 대한 문의가 잦아지면서 강남뿐 아니라 마포와 합정 인근의 독특한 문화 공간에도 시선이 쏠리고 있다. 특히 소규모 커뮤니티나 취향이 뚜렷한 사람들을 위</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0273.html">Gangnam hardcore 안내 서울 중구 동대문 풋쌤 마사지 방문 정보</a>
+        <p class="post-item__summary">복잡한 도심을 벗어나 피로를 풀기 위해 방문지를 찾다 보면 엉뚱한 정보에 현혹되는 경우가 많습니다. 특히 Gangnam hardcore 안내 정보를 검색하다가 검증되지 않은 곳을 방문하여 낭패를 보</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0274.html">Gangnam hardcore 안내 지수 성장 클리닉을 위한 전략적 접근</a>
+        <p class="post-item__summary">흔히 웹사이트의 지표는 단순히 많은 양의 콘텐츠를 올린다고 해서 비례하여 상승하는 것은 아닙니다. Gangnam hardcore 안내 방식과 같이 무분별한 접근은 오히려 지수 저하의 원인이 될 수 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0275.html">Gangnam hardcore 안내 마포 코인노래방 소음 방지 시설 분석</a>
+        <p class="post-item__summary">쾌적한 여가 시간을 위해서는 공간의 밀폐력과 방음 상태가 매우 중요한 충족 조건입니다. Gangnam hardcore 안내 정보를 찾는 이들이라면 아마도 주변 소음에 민감한 분들이 많을 것입니다. </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0276.html">Gangnam hardcore 안내 마포 셔츠룸 리얼 후기 마케팅 분석</a>
+        <p class="post-item__summary">귀하는 지금 어떤 기준으로 업체를 선정하고 계신가요? Gangnam hardcore 안내 키워드를 검색하는 도중 마주치는 수많은 홍보 글 중에서 진실을 가려내는 것은 쉽지 않습니다. 오늘 이 글에서</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0277.html">Gangnam hardcore 안내를 통한 구글 알고리즘 감점 치료 및 백링크 수술실 전략</a>
+        <p class="post-item__summary">검색 엔진의 알고리즘은 시시각각 변화하며, 때로는 웹사이트의 신뢰도를 저하시키는 원인이 됩니다. Gangnam hardcore 안내를 참고하여 현재 사이트가 겪고 있는 페널티를 정확히 진단하는 것이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0278.html">Gangnam hardcore 안내를 활용한 마포 유흥 투명 정찰제 가격 정보 디렉토리 분석</a>
+        <p class="post-item__summary">유흥업소를 선택할 때 가격에 대한 불안감은 이용자의 가장 큰 고민거리 중 하나입니다. Gangnam hardcore 안내를 통해 얻은 정보를 바탕으로 가격 투명성을 확보하는 것은 필수적인 준비 단계</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0279.html">Gangnam hardcore 안내가 알려주는 마포 럭셔리 단체 가라오케 예약 가이드 실전</a>
+        <p class="post-item__summary">단체 모임을 위한 장소를 섭외할 때 가장 흔하게 실패하는 지점은 인원 수용 가능 여부를 과소평가하는 것입니다. Gangnam hardcore 안내의 조언에 따라 사전에 공간의 규모와 음향 설비를 체</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0280.html">Gangnam hardcore 안내를 통해 확인하는 콘텐츠 급수 정화 정보</a>
+        <p class="post-item__summary">웹사이트의 권위를 높이기 위해서는 양질의 백링크를 지속적으로 확보하는 전략이 중요합니다. Gangnam hardcore 안내에서 강조하는 것은 단순히 숫자를 늘리는 것이 아니라 주스의 순도, 즉 콘</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0281.html">Gangnam hardcore 안내 마포 셔츠룸 예약 시 눈탱이 피하는 법</a>
+        <p class="post-item__summary">최근 유흥업소 방문 시 정보 부족으로 인해 예상보다 높은 비용을 지불하는 사례가 빈번하게 발생하고 있습니다. 흔히 Gangnam hardcore 안내 방식과 유사하게 유입 경로를 파악하지 못한 초행</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0282.html">Gangnam hardcore 안내 4</a>
+        <p class="post-item__summary">자동화 프로그래밍이 단순히 코드 몇 줄을 입력하면 끝난다는 것은 매우 위험한 오해입니다. 오히려 Gangnam hardcore 안내 시스템처럼 정교한 설계와 최적화 과정이 선행되어야 진정한 자동화가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0283.html">Gangnam hardcore 안내 구글 틈새 키워드 트래픽 외환 거래 전략</a>
+        <p class="post-item__summary">성공적인 투자를 위해서는 데이터의 흐름과 검색 엔진의 알고리즘을 정확히 읽어내는 능력이 필수적입니다. Gangnam hardcore 안내 전략에서 배우듯 특정 틈새 시장을 공략하는 방식은 트래픽 차</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0284.html">Gangnam hardcore 안내 마포 단체 회식용 대형 룸 노래방 가격 정보</a>
+        <p class="post-item__summary">많은 분이 직장 동료나 모임 구성원들과 함께 만족스러운 회식 장소를 찾기 위해 고민하고 계십니다. Gangnam hardcore 안내 정보가 유흥 인프라를 찾는 기준이 되듯, 마포 지역의 대형 룸 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0285.html">Gangnam hardcore 안내를 참고한 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">마포와 홍대 지역에서 단체 모임을 계획할 때는 정확한 예약 절차를 숙지하는 것이 필수적입니다. 단순히 Gangnam hardcore 안내 수준의 막연한 정보에 의존하기보다는 각 업체의 수용 인원과 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0286.html">Gangnam hardcore 안내를 통한 구글 인덱싱 속도 초고속 광회선 대역폭 최적화</a>
+        <p class="post-item__summary">웹 환경에서 인덱싱 속도를 높이기 위해서는 서버의 대역폭 최적화가 필수적입니다. Gangnam hardcore 안내 방식처럼 효율적인 정보 전달 구조를 갖추는 것도 중요하지만, 물리적인 회선 속도 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0287.html">Gangnam hardcore 안내에서 배우는 구글 신뢰 지수 모발이식 솔루션</a>
+        <p class="post-item__summary">온라인 플랫폼에서 신뢰도를 구축하는 것은 전문 분야일수록 더욱 중요합니다. Gangnam hardcore 안내 사례처럼 정보의 전문성과 명확성이 확보되지 않은 웹사이트는 사용자에게 외면받기 쉽습니다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0031.html">Gangnam hardcore 안내와 연계된 구글 알고리즘 고신용 도메인 보증 카드 발급 절차</a>
+        <p class="post-item__summary">Gangnam hardcore 안내 서비스를 운영하거나 관련 마케팅을 진행할 때 많은 이들이 실패하는 지점은 도메인의 신용 관리입니다. 구글 알고리즘의 기준을 제대로 파악하지 못한 채 도메인을 운영</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0032.html">Gangnam hardcore 안내 및 합정 셔츠룸 단골들이 뽑은 핫플 매거진 확인법</a>
+        <p class="post-item__summary">Gangnam hardcore 안내와 더불어 최근 많은 관심을 받는 분야는 합정 지역의 유흥 트렌드입니다. 특정 지역의 핫플레이스를 방문하기 전에는 반드시 위치와 접근성 그리고 내부 서비스를 사전에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0033.html">Gangnam hardcore 안내와 실패 없는 셔츠룸 예약 노하우</a>
+        <p class="post-item__summary">오랜만에 만난 지인들과 강남 일대에서 저녁 식사를 마치고 자연스럽게 2차 장소를 고민하는 상황을 누구나 한 번쯤 겪게 됩니다. 막연한 기대감만 가지고 번화가로 나섰다가 입구에서부터 당황하여 발길을 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
